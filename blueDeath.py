@@ -21,8 +21,3 @@ while delay != 0:
     subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
     subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     delay -= 1
-
-
-
-
-
