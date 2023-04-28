@@ -12,7 +12,7 @@ def start():
 start()
 
 mac = input("MAC of victim: ")
-time = (999)
+time = input("Time of jamming: ")
 print("Start jamming...")
 delay = int(time)
 
