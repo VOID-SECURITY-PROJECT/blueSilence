@@ -12,7 +12,11 @@ def start():
 start()
 
 def main():
-
+    clear = "clear"
+    subprocess.Popen(clear, shell=True)
+    start()
+    print("GUI Version")
+    print(" ")
     interface = input("Your BT interface : ")
     mac = input("MAC of victim: ")
     time = 999
@@ -28,11 +32,9 @@ def main():
         subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         delay -= 1
 
-choose = input("Do you have GUI? y/N")
+choose = input("Do you have GUI? y/N ")
 if input == "y" or "Y" :
     main()
-elif input == "n" or "N" :
-    no_gui.no_gui()
 else:
     print("ERROR")
     print("Executing no GUI version")
