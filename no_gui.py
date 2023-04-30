@@ -2,9 +2,6 @@ import subprocess
 import headers
 
 def no_gui():
-    clear = "clear"
-    subprocess.Popen(clear, shell=True)
-    headers.header()
     print("No GUI Version")
     print(" ")
     interface = input("Your BT interface : ")

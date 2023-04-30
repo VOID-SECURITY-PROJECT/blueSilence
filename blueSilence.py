@@ -11,9 +11,6 @@ colorama.init(autoreset=True)
 headers.header()
 
 def main():
-    clear = "clear"
-    subprocess.Popen(clear, shell=True)
-    headers.header()
     print("GUI Version")
     print(" ")
     interface = input("Your BT interface : ")
