@@ -7,14 +7,13 @@ from colorama import Fore, Back, Style
 import headers
 import random
 colorama.init(autoreset=True)
-def start():
-    headers.header()
-start()
+
+headers.header()
 
 def main():
     clear = "clear"
     subprocess.Popen(clear, shell=True)
-    start()
+    headers.header()
     print("GUI Version")
     print(" ")
     interface = input("Your BT interface : ")
@@ -33,8 +32,10 @@ def main():
         delay -= 1
 
 choose = input("Do you have GUI? y/N ")
-if input == "y" or "Y" :
+if choose == "y" or choose == "Y" :
     main()
+elif choose == "n" or choose == "N":
+    no_gui.no_gui()
 else:
     print("ERROR")
     print("Executing no GUI version")
