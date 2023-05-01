@@ -19,5 +19,5 @@ def no_gui():
             subprocess.Popen(xterm_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             delay -= 1
-    except OSError:
-        print("done")
+    except Exception as e:
+        print("meow", e)
