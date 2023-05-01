@@ -11,3 +11,4 @@ A Linux-based operating system.
 git clone https://github.com/VOID-SECURITY-PROJECT/blueSilence.git
 cd blueSilence
 pip install -r requirements.txt
+```
