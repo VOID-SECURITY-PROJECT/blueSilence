@@ -3,6 +3,8 @@ The most powerful Bluetooth DDoS tool.
 
 Easy but useful script for Bluetooth DDoS.
 
+**The author is not responsible for your actions**
+
 # Requirements 
 A Linux-based operating system.
 
@@ -17,4 +19,3 @@ pip install -r requirements.txt
 ```
 python blueSilence.py
 ```
-
