@@ -6,6 +6,8 @@ colorama.init(autoreset=True)
 
 headers.header()
 
+BTService = ("systemctl start bluetooth.service")
+subprocess.Popen(BTService, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 def main():
     try:
         print(" ")
