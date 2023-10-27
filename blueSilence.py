@@ -38,6 +38,7 @@ def main():
             endless_jamming()
         else:
             print("We will give them chance...")
+            limited_jamming()
 
     except Exception as e:
         print(" ")
