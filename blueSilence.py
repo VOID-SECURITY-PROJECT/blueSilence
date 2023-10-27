@@ -10,6 +10,7 @@ BTService = ("systemctl start bluetooth.service")
 subprocess.Popen(BTService, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 time = 999
 
+
 def main():
     try:
         time = 999
