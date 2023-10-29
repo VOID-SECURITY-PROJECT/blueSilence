@@ -18,9 +18,12 @@ def endless_jamming():
         xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
         xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
         xterm_3 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
-        subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        subprocess.Popen(xterm_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        process_1 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        process_2 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        process_3 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        process_1.wait()
+        process_2.wait()
+        process_3.wait()
 
 
 def limited_jamming():
