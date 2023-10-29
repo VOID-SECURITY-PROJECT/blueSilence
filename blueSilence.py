@@ -46,8 +46,8 @@ def limited_jamming():
 
 def main():
     print(" ")
-    user_input = input("Do you want endless jamming? (yes/no): ")
-    if user_input.lower() in ["yes", "y"]:
+    user_input = input("Do you want endless jamming? (yes/No): ")
+    if user_input.lower() in ["yes", "y", "Y", "Yes", "YES"]:
         endless_jamming()
     else:
         print("We will give them chance...")
