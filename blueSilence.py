@@ -23,7 +23,7 @@ def endless_jamming():
             process_1 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             process_2 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             process_3 = subprocess.Popen(xterm_1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-            time.sleep(0.01)
+            time.sleep(0.1)
     except Exception as ctrl:
         print("See ya later")
 
