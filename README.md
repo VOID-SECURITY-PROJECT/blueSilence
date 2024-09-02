@@ -1,5 +1,5 @@
 # blueSilence
-The most powerful Bluetooth DDoS tool.
+The most powerful Bluetooth DoS tool.
 
 Easy but useful script for Bluetooth DDoS.
 
