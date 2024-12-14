@@ -1,7 +1,7 @@
 # blueSilence
 The most powerful Bluetooth DoS tool.
 
-Easy but useful script for Bluetooth DoS.
+Simple but useful script for Bluetooth DoS.
 
 **The author is not responsible for your actions**
 
