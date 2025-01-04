@@ -17,5 +17,5 @@ pip install -r requirements.txt
 
 # Usage
 ```
-python blueSilence.py
+sudo python3 blueSilence.py
 ```
