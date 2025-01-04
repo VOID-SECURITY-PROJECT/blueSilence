@@ -1,9 +1,9 @@
 # blueSilence
-The most powerful Bluetooth DoS tool.
+The most powerful opensource Bluetooth DoS tool.
 
 Simple but useful script for Bluetooth DoS.
 
-**The author is not responsible for your actions**
+**The author is not responsible for your actions/bricked devices/screaming neighbours/nuclear launchers etc.**
 
 # Requirements 
 A Linux-based operating system.
@@ -12,10 +12,11 @@ A Linux-based operating system.
 ```
 git clone https://github.com/VOID-SECURITY-PROJECT/blueSilence.git
 cd blueSilence
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 # Usage
+**Root priveleges required**
 ```
-sudo python3 blueSilence.py
+python3 blueSilence.py
 ```
